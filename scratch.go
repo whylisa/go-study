@@ -255,6 +255,14 @@ package main
 //	return len(*q) == 0
 //}
 
+//func 函数名（形式参数列表）（返回值列表） {
+//	函数体
+//}
+//func hypot(x,y,float64) float64 {
+//	return math.Sqrt(x*x+y*y)
+//}
+//func f(i,j,k,int,s,t,string){}
+//func f(i int ,j string,k int,s string ,t string){}
 
 
 
