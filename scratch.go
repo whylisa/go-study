@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //ch < - v
 //v := <-ch
 //func say (s string ) {
@@ -266,28 +264,64 @@ import "fmt"
 //func f(i,j,k,int,s,t,string){}
 //func f(i int ,j string,k int,s string ,t string){}
 
-const (
-	SecondsPerMinute = 60
-	SecondsPerHour = SecondsPerMinute * 60
-	secondsPerDay = SecondsPerHour * 24
-)
-func resolveTime(seconds int) (day int, hour int ,minute int,) {
-	day = seconds / secondsPerDay
-	hour = seconds / SecondsPerHour
-	minute = seconds / SecondsPerMinute
-
-	return
-}
-
-func main() {
-	_,hour,minute := resolveTime(18000)
-	fmt.Println(hour,minute)
-	day,_,_ := resolveTime(90000)
-	fmt.Println(day)
-}
-
-
-
+//const (
+//	SecondsPerMinute = 60
+//	SecondsPerHour = SecondsPerMinute * 60
+//	secondsPerDay = SecondsPerHour * 24
+//)
+//func resolveTime(seconds int) (day int, hour int ,minute int,) {
+//	day = seconds / secondsPerDay
+//	hour = seconds / SecondsPerHour
+//	minute = seconds / SecondsPerMinute
+//
+//	return
+//}
+//
+//func main() {
+//	_,hour,minute := resolveTime(18000)
+//	fmt.Println(hour,minute)
+//	day,_,_ := resolveTime(90000)
+//	fmt.Println(day)
+//}
+//
+//func fire() {
+//	fmt.Println("fire")
+//}
+//func main () {
+//	var f func()
+//	f = fire
+//
+//	f()
+//}
+//func StringProcess(list []string,chain []func(string) string) {
+//	for index,str := range list {
+//		result := str
+//		for _,proc := range chain {
+//			result = proc((result))
+//		}
+//		list[index] = result
+//	}
+//}
+//
+//func removePrefix(str string) string {
+//	return string.TrimPrefix(str,"go")
+//}
+//func main () {
+//	list := []string {
+//		"go scanner",
+//		"go parser"
+//	}
+//	chain := []func(string) string {
+//		removePrefix,
+//		strings.TrimSpace,
+//		strings..ToUpper
+//	}
+//	StringProcess(list,chain)
+//	for _, str := range list {
+//		fmt.Println(str)
+//	}
+//}
+//
 
 
 
