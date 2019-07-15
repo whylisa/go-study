@@ -1,5 +1,7 @@
 package main
 
+import "net/http"
+
 //ch < - v
 //v := <-ch
 //func say (s string ) {
@@ -341,12 +343,95 @@ package main
 //	fmt.Println("hello", data)
 //}
 //f(100)
+//func visit(list []int, f func(int) ) {
+//	for _,v := range list {
+//		f(v)
+//	}
+//}
+//func main() {
+//	visit([]int{1,2,3,4}, func(v int) {
+//		fmt.Println(v)
+//	})
+//}
 
+//var skillParam = flag.String("skill","","skil to perform")
+//
+//func main() {
+//	flag.Parse()
+//	var skill = map[string]func() {
+//		"fire": func() {
+//			fmt.Println("chicken fire")
+//	},
+//		"run": func() {
+//			fmt.Println("sloider run")
+//		},
+//		"fly": func() {
+//			fmt.Println("skill not found")
+//		},
+//	}
+//	if f , ok := skill[*skillParam];ok {
+//		f()
+//	}else {
+//		fmt.Println("skill not found")
+//	}
+//}
+//type Invoke interface {
+//	Call(interface{})
+//}
+//
+//type Struct struct {
+//
+//}
+//func (s *Struct)Call(p interface{}){
+//	fmt.Println("from struct", p)
+//
+//}
+//type FuncCaller func(interface{})
+//
+//func (f FuncCaller)Call(p interface{}) {
+//	f(p)
+//}
+//func main() {
+//	var invoke Invoke
+//	s := new(Struct)
+//	invoke = s
+//	invoke.Call("hello")
+//
+//	invoke = FuncCaller((func(v interface{}) {
+//		fmt.Println("from function ",v)
+//	}))
+//	invoke.Call("hello")
+//}
+//
+//type Invoke interface {
+//	Call(interface{})
+//}
+//type Struct struct {
+//
+//}
+//func (s *Struct)Call (p interface{}) {
+//	fmt.Println("from struct",p)
+//}
+//var invoker Invoker
+//s:=new(Struct)
+//invaker = s
+//invoker.Call("hello")
+//
+//type FuncCaller func(interface{})
+//
+//func (f FuncCaller)Call(p interface{})  {
+//	f(p)
+//}
+//
+//var invoker Invoker
+//invoker = funcCaller(func(v ast.InterfaceType) {
+//	fmt.Println("from function", v)
+//})
+//invoker.Call("hello")
 
-
-
-
-
-
+type HandlerFunc func(w http.ResponseWriter,*Request)
+func (f HandlerFunc) ServeHTTP(w http.ResponseWriter,r *Request) {
+	f(w,r)
+}
 
 
