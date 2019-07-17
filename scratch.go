@@ -1,7 +1,5 @@
 package main
 
-import "net/http"
-
 //ch < - v
 //v := <-ch
 //func say (s string ) {
@@ -429,9 +427,47 @@ import "net/http"
 //})
 //invoker.Call("hello")
 
-type HandlerFunc func(w http.ResponseWriter,*Request)
-func (f HandlerFunc) ServeHTTP(w http.ResponseWriter,r *Request) {
-	f(w,r)
+//type HandlerFunc func(w http.ResponseWriter,*Request)
+//func (f HandlerFunc) ServeHTTP(w http.ResponseWriter,r *Request) {
+//	f(w,r)
+//}
+type Point struct {
+	X int
+	Y int
 }
+type Color struct {
+	R,G,B byte
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
