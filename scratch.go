@@ -431,16 +431,21 @@ package main
 //func (f HandlerFunc) ServeHTTP(w http.ResponseWriter,r *Request) {
 //	f(w,r)
 //}
-type Point struct {
-	X int
-	Y int
-}
-type Color struct {
-	R,G,B byte
-}
+//type Point struct {
+//	X int
+//	Y int
+//}
+//type Color struct {
+//	R,G,B byte
+//}
+//type Point struct {
+//	 X int
+//	 Y int
+//}
 
-
-
+//var p Point
+//p.X = 10
+//p.Y = 20
 
 
 
