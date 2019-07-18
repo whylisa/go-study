@@ -446,7 +446,20 @@ package main
 //var p Point
 //p.X = 10
 //p.Y = 20
+type People struct {
+	name string
+	child * People
+}
 
+relation := &People {
+	name: "也饿",
+	child: &People {
+		name: "爸爸",
+		child: &People {
+			name: "我"
+}
+}
+}
 
 
 
