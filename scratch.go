@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //ch < - v
 //v := <-ch
 //func say (s string ) {
@@ -459,15 +461,29 @@ package main
 //			name: "我"
 //}
 //}
+//}type
+//
+//type Cat struct {
+//	Color string
+//
 //}
-
-type Cat struct {
-	Color string
+type DataWriter interface {
+	WriteData(data interface{}) error
+}
+type file struct {
 
 }
+func (d *file) WriteData(data interface{}) error {
+	fmt.Println("WriteData",data)
+	return nil
+}
 
-
-
+func main() {
+	f := new(file)
+	var writer DataWriter
+	writer = f
+	writer.WriteData("data")
+}
 
 
 
