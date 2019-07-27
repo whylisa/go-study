@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 //ch < - v
 //v := <-ch
@@ -467,29 +470,69 @@ import "fmt"
 //	Color string
 //
 //}
-type DataWriter interface {
-	WriteData(data interface{}) error
+//type DataWriter interface {
+//	WriteData(data interface{}) error
+//}
+//type file struct {
+//
+//}
+//func (d *file) WriteData(data interface{}) error {
+//	fmt.Println("WriteData",data)
+//	return nil
+//}
+//
+//func main() {
+//	f := new(file)
+//	var writer DataWriter
+//	writer = f
+//	writer.WriteData("data")
+//}
+
+
+//cha1 := make(chan int)
+//cha2 := make(chan interface{})
+//type Equip struct{}
+//ch2 := make(chan *Equip)
+//ch := make(chan interface{})
+//ch <- 0
+//ch <- "hello"
+//
+//func main () {
+//	ch := make(chan int)
+//	ch <- 0
+//}
+
+func main () {
+	ch := make(chan int )
+	go func () {
+		fmt.Println("start goroutine")
+		ch <- 0
+		fmt.Println("exit gorountine")
+	}()
+	fmt.Println("wait goroutine")
+	<-ch
+	fmt.Println("all done")
 }
-type file struct {
+
+for data := range ch {
 
 }
-func (d *file) WriteData(data interface{}) error {
-	fmt.Println("WriteData",data)
-	return nil
+
+func main () {
+	ch := make(chan int )
+	go func () {
+		for i := 3; i >=0 ;i--{
+			ch <- i
+			time.Sleep(time.Second)
+		}
+	}()
+	for data := range ch {
+		fmt.Println(data)
+		if data == 0 {
+			break
+		}
+	}
 }
-
-func main() {
-	f := new(file)
-	var writer DataWriter
-	writer = f
-	writer.WriteData("data")
-}
-
-
-
-
-
-
 
 
 
