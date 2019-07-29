@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 //ch < - v
 //v := <-ch
@@ -502,39 +499,47 @@ import (
 //	ch <- 0
 //}
 
-func main () {
-	ch := make(chan int )
-	go func () {
-		fmt.Println("start goroutine")
-		ch <- 0
-		fmt.Println("exit gorountine")
-	}()
-	fmt.Println("wait goroutine")
-	<-ch
-	fmt.Println("all done")
+//func main () {
+//	ch := make(chan int )
+//	go func () {
+//		fmt.Println("start goroutine")
+//		ch <- 0
+//		fmt.Println("exit gorountine")
+//	}()
+//	fmt.Println("wait goroutine")
+//	<-ch
+//	fmt.Println("all done")
+//}
+//
+//for data := range ch {
+//
+//}
+//
+//func main () {
+//	ch := make(chan int )
+//	go func () {
+//		for i := 3; i >=0 ;i--{
+//			ch <- i
+//			time.Sleep(time.Second)
+//		}
+//	}()
+//	for data := range ch {
+//		fmt.Println(data)
+//		if data == 0 {
+//			break
+//		}
+//	}
+//}
+//
+
+type Retriever struct {
+	Contents string
 }
-
-for data := range ch {
-
+func (r *Retriever) String() string {
+	return fmt.Sprintf(
+		"Retriver: {Contents=%s}",r.Contents
+		)
 }
-
-func main () {
-	ch := make(chan int )
-	go func () {
-		for i := 3; i >=0 ;i--{
-			ch <- i
-			time.Sleep(time.Second)
-		}
-	}()
-	for data := range ch {
-		fmt.Println(data)
-		if data == 0 {
-			break
-		}
-	}
-}
-
-
 
 
 
