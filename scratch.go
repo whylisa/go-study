@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //ch < - v
 //v := <-ch
 //func say (s string ) {
@@ -597,7 +599,7 @@ package main
 //}
 // type Person struct {
 // 	Name string
-// 	Age int 
+// 	Age int
 // }
 //
 //type Teacher struct {
@@ -619,7 +621,21 @@ package main
 //	fmt.Println(man1,man1.job.Salary)
 //}
 
+type Person struct {
+	Name string
+	Age int
+}
 
+func (p Person) Getname() string{
+	fmt.Println(p.Name)
+	return p.Name
+}
+func main () {
+	var person1 = new(Person)
+	person1.Age = 22
+	person1.Name = "ss"
+	person1.Getname()
+}
 
 
 
