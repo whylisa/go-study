@@ -595,10 +595,29 @@ package main
 //	}
 //	fmt.Println(string(data))
 //}
-
-
-
-
+// type Person struct {
+// 	Name string
+// 	Age int 
+// }
+//
+//type Teacher struct {
+//	Salary int
+//	Classes string
+//}
+//type man struct {
+//	sex string
+//	job Teacher
+//	Person
+//
+//}
+//
+//func main () {
+//	var man1 = new(man)
+//	man1.Age = 22
+//	man1.Name = "fd"
+//	man1.job.Salary = 5555
+//	fmt.Println(man1,man1.job.Salary)
+//}
 
 
 
