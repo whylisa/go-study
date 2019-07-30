@@ -621,22 +621,35 @@ import "fmt"
 //	fmt.Println(man1,man1.job.Salary)
 //}
 
+//type Person struct {
+//	Name string
+//	Age int
+//}
+//
+//func (p Person) Getname() string{
+//	fmt.Println(p.Name)
+//	return p.Name
+//}
+//func main () {
+//	var person1 = new(Person)
+//	person1.Age = 22
+//	person1.Name = "ss"
+//	person1.Getname()
+//}
+
 type Person struct {
 	Name string
 	Age int
 }
-
-func (p Person) Getname() string{
-	fmt.Println(p.Name)
-	return p.Name
+func (self *Person) init(name string, age int) {
+	aelf.Name = name
+	self.Age = age
 }
 func main () {
 	var person1 = new(Person)
-	person1.Age = 22
-	person1.Name = "ss"
-	person1.Getname()
+	person1.init("wd",22)
+	fmt.Println(person1)
 }
-
 
 
 
