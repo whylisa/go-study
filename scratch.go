@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //ch < - v
 //v := <-ch
 //func say (s string ) {
@@ -540,29 +538,63 @@ import "fmt"
 //		"Retriver: {Contents=%s}",r.Contents
 //		)
 //}
-type Student struct {
-	name string
-	age int
-	Class string
-}
+//type Student struct {
+//	name string
+//	age int
+//	Class string
+//}
+//
+//func main () {
+//	var stu1 Student
+//	stu1.age = 22
+//	stu1.name = "wd"
+//	stu1.Class = "class1"
+//	fmt.Println(stu1.name)
+//
+//	var stu2 *Student = new(Student)
+//	stu2.name = "jack"
+//	stu2.age = 32
+//	fmt.Println(stu2.name,(*stu2).name)
+//
+//	var stu3 *Student = &Student{name:"rose",age:18,Class:"class3"}
+//	fmt.Println(stu3.name,(*stu3).name)
+//}
 
-func main () {
-	var stu1 Student
-	stu1.age = 22
-	stu1.name = "wd"
-	stu1.Class = "class1"
-	fmt.Println(stu1.name)
-
-	var stu2 *Student = new(Student)
-	stu2.name = "jack"
-	stu2.age = 32
-	fmt.Println(stu2.name,(*stu2).name)
-
-	var stu3 *Student = &Student{name:"rose",age:18,Class:"class3"}
-	fmt.Println(stu3.name,(*stu3).name)
-}
-
-
+//type Student struct {
+//	name string
+//	age int
+//	Class string
+//}
+//
+//func Newstu(name1 string ,age1 int ,class1 string ) *Student {
+//	return &Student{name:name1,age:age1,Class:class1}
+//}
+//func main () {
+//	stu1  := Newstu("wd",22,"math")
+//	fmt.Println(stu1.name)
+//}
+//
+//type Student struct {
+//	Name string "the name of student"
+//	Age int "the age of student"
+//	Class string "the class of student"
+//
+//}
+//type Student struct {
+//	Name string `json:"name"`
+//	Age int `json:"age"`
+//
+//}
+//
+//func main () {
+//	var stu = Student{Name:"wd",Age:22}
+//	data,err := json.Marshal(stu)
+//	if err != nil {
+//		fmt.Println("json encode failed err:",err)
+//		return
+//	}
+//	fmt.Println(string(data))
+//}
 
 
 
