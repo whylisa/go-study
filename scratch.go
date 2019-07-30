@@ -637,21 +637,40 @@ import "fmt"
 //	person1.Getname()
 //}
 
-type Person struct {
+//type Person struct {
+//	Name string
+//	Age int
+//}
+//func (self *Person) init(name string, age int) {
+//	aelf.Name = name
+//	self.Age = age
+//}
+//func main () {
+//	var person1 = new(Person)
+//	person1.init("wd",22)
+//	fmt.Println(person1)
+//}
+
+type Skills interface {
+	Running()
+	getname() string
+}
+type Student struct {
 	Name string
 	Age int
 }
-func (self *Person) init(name string, age int) {
-	aelf.Name = name
-	self.Age = age
+
+func (p Student) Getname() string {
+	fmt.Println(p.Name)
+	return p.Name
 }
-func main () {
-	var person1 = new(Person)
-	person1.init("wd",22)
-	fmt.Println(person1)
+func main() {
+	var skill Skills
+	var stu1 Student
+	stu1.Name = "wd"
+	stu1.Age = 22
+	skill = stu1
+	skill.Running()
 }
-
-
-
 
 
