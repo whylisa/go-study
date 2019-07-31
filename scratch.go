@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //ch < - v
 //v := <-ch
 //func say (s string ) {
@@ -651,26 +649,69 @@ import "fmt"
 //	fmt.Println(person1)
 //}
 
-type Skills interface {
-	Running()
-	getname() string
-}
-type Student struct {
-	Name string
-	Age int
-}
+//type Skills interface {
+//	Running()
+//	Getname() string
+//}
+//type Student struct {
+//	Name string
+//	Age int
+//}
+//
+//func (p Student) Getname() string {
+//	fmt.Println(p.Name)
+//	return p.Name
+//}
+//func (p Student) Getname() string {
+//	fmt.Println(p.Name)
+//	return p.Name
+//}
+//func main() {
+//	var skill Skills
+//	var stu1 Student
+//	stu1.Name = "wd"
+//	stu1.Age = 22
+//	skill = stu1
+//	skill.Running()
+//}
 
-func (p Student) Getname() string {
-	fmt.Println(p.Name)
-	return p.Name
-}
-func main() {
-	var skill Skills
-	var stu1 Student
-	stu1.Name = "wd"
-	stu1.Age = 22
-	skill = stu1
-	skill.Running()
-}
+//func running () {
+//	var times int
+//	for {
+//		times++
+//		fmt.Println("tick",times)
+//		time.Sleep(time.Second)
+//	}
+//}
+//
+//func main() {
+//	go running()
+//	var input string
+//	fmt.Scanln(&input)
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
