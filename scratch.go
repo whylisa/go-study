@@ -788,8 +788,16 @@ package main
 //	var str string = "banana"
 //	fmt.Println("%p %p",&cat,&str)
 //}
+//func main () {
+//	var house = "maliubu Point 10080,90"
+//
+//	ptr := &house
+//	fmt.Println(ptr)
+//}
 
-
+func swap(a,b *int ) {
+	
+}
 
 
 
