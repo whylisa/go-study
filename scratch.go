@@ -760,8 +760,34 @@ package main
 //
 //ch2 := make(chan *Equip)
 //
-
-
+//
+//ch := make(chan interface{})
+//ch <- 0
+//ch <- "hello"
+//func main () {
+//	ch := make(chan int )
+//	ch <- 0
+//}
+//
+//func main () {
+//	ch := make(chan int)
+//	go func () {
+//		fmt.Println("start goroutine")
+//		ch <- 0
+//		fmt.Println("exit goroutine")
+//	}()
+//
+//	fmt.Println("wait goroutine")
+//	<- ch
+//	fmt.Println("all done")
+//}
+//ptr := &v
+//
+//func main() {
+//	var cat int = 1
+//	var str string = "banana"
+//	fmt.Println("%p %p",&cat,&str)
+//}
 
 
 
