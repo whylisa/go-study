@@ -794,20 +794,53 @@ package main
 //	ptr := &house
 //	fmt.Println(ptr)
 //}
+//
+//func swap(a,b *int ) {
+//  t := *a
+//  *a = *b
+//  *b = t
+//}
+//
+//func main() {
+//x,y := 1,2
+//swap(&x,&y)
+//fmt.Println(x,y)
+//}
 
-func swap(a,b *int ) {
-
+func swap(a, b *int) {
+  b,a = a,b
+  
+}
+func main() {
+  x,y := 1,2
+  swap(&a,&b)
+  fmt.Println(x,y)
 }
 
+var mode = flag.String("mode","","process mode")
+func main() {
+ flag.Parse()
+ fmt.Println(*mode)
+}
 
+str := new(string)
+*str = "ninja"
+fmt.Println(*str)
 
+slice1 := make([]type, len)
 
+make([]T,length,capacity)
 
-
-
-
-
-
+s := [] int {1,2,3}
+s := arr[:]
+s := arr[startIndex:endIndex]
+func main() {
+   var numbers = make([]int,3,5)
+   printSlice(numbers)
+}
+func printSlice(x []int) {
+  
+}
 
 
 
